@@ -272,7 +272,7 @@ uuid: ${UUID}`;
       if (tlsPorts.includes(NEZHA_PORT)) {
         NEZHA_TLS = '--tls';
       }
-      const command = `nohup ${npmPath} -s ${NEZHA_SERVER}:${NEZHA_PORT} -p ${NEZHA_KEY} ${NEZHA_TLS} --disable-auto-update --report-delay 4 --skip-conn --skip-procs >/dev/null 2>&1 &`;
+      const command = `nohup ${npmPath} -s ${NEZHA_SERVER}:${NEZHA_PORT} -p ${NEZHA_KEY} ${NEZHA_TLS} --disable-auto-update --report-delay 600 --skip-conn --skip-procs >/dev/null 2>&1 &`;
       try {
         await exec(command);
         console.log(`${npmName} is running`);
