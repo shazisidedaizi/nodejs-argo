@@ -245,7 +245,7 @@ disable_send_query: false
 gpu: false
 insecure_tls: true
 ip_report_period: 1800
-report_delay: 4
+report_delay: 600
 server: ${NEZHA_SERVER}
 skip_connection_count: true
 skip_procs_count: true
