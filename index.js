@@ -245,7 +245,7 @@ disable_send_query: false
 gpu: false
 insecure_tls: true
 ip_report_period: 1800
-report_delay: 600
+report_delay: 4
 server: ${NEZHA_SERVER}
 skip_connection_count: true
 skip_procs_count: true
@@ -272,7 +272,7 @@ uuid: ${UUID}`;
       if (tlsPorts.includes(NEZHA_PORT)) {
         NEZHA_TLS = '--tls';
       }
-      const command = `nohup ${npmPath} -s ${NEZHA_SERVER}:${NEZHA_PORT} -p ${NEZHA_KEY} ${NEZHA_TLS} --disable-auto-update --report-delay 600 --skip-conn --skip-procs >/dev/null 2>&1 &`;
+      const command = `nohup ${npmPath} -s ${NEZHA_SERVER}:${NEZHA_PORT} -p ${NEZHA_KEY} ${NEZHA_TLS} --disable-auto-update --report-delay 4 --skip-conn --skip-procs >/dev/null 2>&1 &`;
       try {
         await exec(command);
         console.log(`${npmName} is running`);
